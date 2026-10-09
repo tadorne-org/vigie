@@ -11,6 +11,8 @@ params:
         url: "/fr/projet/"
       - label: "La conception"
         url: "/fr/conception/"
+      - label: "Kit — bientôt disponible"
+        url: "/fr/interet/"
         solid: true
   video:
     mp4: "/video/vigie-fr.mp4"
@@ -36,10 +38,10 @@ params:
     - title: "Fabriquée par scripts"
       body: "Schéma, implantation et routage sont régénérés par du code versionné, pas dessinés à la main."
   closing:
-    title: "Lire la conception"
-    body: "Schéma, implantation et routage, produits par des scripts versionnés."
-    url: "/fr/conception/"
-    label: "Le dossier de conception"
+    title: "Rejoindre Vigie"
+    body: "Bêta-testeurs et contributeurs recherchés. La carte est sur le banc, la saison à flot suivra."
+    url: "mailto:contact@tadorne.org?subject=Vigie%20%E2%80%94%20b%C3%AAta-test%20%2F%20contribution&body=Bonjour%2C%0A%0AJe%20souhaite%20m%27impliquer%20dans%20Vigie.%0A%0ACe%20que%20je%20peux%20apporter%20%3A%0A-%0A%0ACe%20que%20je%20cherche%20%3A%0A-%0A%0AMerci."
+    label: "Écrire"
 ---
 
 L'état de la batterie lu au shunt, et une veille tenue toute l'année.
