@@ -5,6 +5,7 @@ url: /fr/documentation/
 description: "Architecture, carte, mesure, micrologiciel et réseau de Vigie 1.0 — travail en cours."
 params:
   eyebrow: "Vigie 1.0"
+  viewer: true
 ---
 
 {{< callout title="Travail en cours" >}}
@@ -133,9 +134,11 @@ GPIO 34 à 39, ne sont pas sortis.
 
 Le micrologiciel tourne sur PlatformIO, plateforme pioarduino figée
 (Arduino-ESP32 3.3.11 / ESP-IDF 5.5), sans aucune bibliothèque externe. Il
-fonctionne dès maintenant sur une devkit ESP32 nue : un simulateur de batterie
-remplace l'INA226 absent, et chaque mesure simulée porte le drapeau `SIM`
-jusque dans le journal et sur les ondes.
+est publié en **version 1.0.0** sous licence GPL-3.0, dans le dossier
+[`firmware/`](https://github.com/tadorne-org/vigie/tree/main/firmware) du dépôt
+([l'annonce](/fr/journal/firmware-1-0/)). Il fonctionne aussi sur une devkit
+ESP32 nue : un simulateur de batterie remplace l'INA226 absent, et chaque mesure
+simulée porte le drapeau `SIM` jusque dans le journal et sur les ondes.
 
 Le cycle est un sommeil profond entrecoupé de réveils courts :
 
@@ -185,8 +188,29 @@ fonctions.
 
 <figure class="doc">
   <img loading="lazy" decoding="async" src="/img/v1-dashboard.webp" alt="Tableau de bord de Vigie 1.0 servi depuis le point d'accès de la carte.">
-  <figcaption>La page d'administration, servie depuis le point d'accès de la carte. Sans shunt, les colonnes de courant affichent encore le fond d'échelle de l'INA226.</figcaption>
+  <figcaption>La page d'administration, servie depuis le point d'accès de la carte (capture prise avec la version 0.1.0). Sans shunt, les colonnes de courant affichent encore le fond d'échelle de l'INA226.</figcaption>
 </figure>
+
+## Le coffret et la semelle TPU
+
+Le nœud se loge dans un coffret étanche du commerce : l'étanchéité vient du
+coffret, et une **semelle en TPU 95A** fait le calage mécanique. Elle tapisse le
+fond du coffret, porte le shunt dans un berceau dont les lèvres se referment sur
+les blocs, et loge la carte sur quatre colonnettes. Un **tampon**, collé sous le
+couvercle, appuie sur le berceau avec 1,5 mm d'écrasement : le shunt est serré
+entre le fond et le couvercle, sans jeu.
+
+{{< viewer src="/models/semelle_shunt_TPU.glb" label="Semelle — berceau du shunt et colonnettes de la carte" >}}
+
+{{< viewer src="/models/tampon_shunt_TPU.glb" label="Tampon — exporté retourné, l'âme contre le plateau" >}}
+
+La semelle s'imprime en 25 % gyroïde, le tampon en 100 % ; le berceau sort plein
+grâce à un modificateur de remplissage. Le source OpenSCAD, les STL et les
+profils Cura sont dans le dossier
+[`mecanique/`](https://github.com/tadorne-org/vigie/tree/main/mecanique), et le
+détail est dans le billet
+[Impression d'une semelle TPU](/fr/journal/impression-semelle-tpu/). Plusieurs
+cotes du coffret restent à relever sur la pièce réelle.
 
 ## Le réseau et l'application
 
@@ -230,8 +254,9 @@ passerelle viendra s'ajouter au réseau sans modifier la carte.
 | Signe du courant au shunt | à valider au premier câblage |
 | Antenne en coffret fermé, en fond de cale | point ouvert ; la variante ESP32-WROOM-32UE, à antenne déportée u.FL, se monte sur la même empreinte |
 | RS485 du MPPT EPEver | non implanté ; module MAX3485 externe sur J7 |
-| Micrologiciel | à publier |
-| Nomenclature et procédure d'étalonnage | à venir avec le micrologiciel |
+| Micrologiciel | publié en 1.0.0 (GPL-3.0) |
+| Coffret | semelle et tampon TPU publiés ; cotes du coffret à mesurer |
+| Nomenclature et procédure d'étalonnage | à venir |
 
 Le banc a validé la compilation des trois environnements, le cycle de sommeil,
 le journal et sa reprise après reset, la resynchronisation à 100 % et la
