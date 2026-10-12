@@ -5,6 +5,7 @@ url: /documentation/
 description: "Architecture, board, measurement, firmware and network of Vigie 1.0 — work in progress."
 params:
   eyebrow: "Vigie 1.0"
+  viewer: true
 ---
 
 {{< callout title="Work in progress" >}}
@@ -129,10 +130,13 @@ out.
 ## Firmware
 
 The firmware runs on PlatformIO, with a pinned pioarduino platform
-(Arduino-ESP32 3.3.11 / ESP-IDF 5.5) and no external library. It already runs on
-a bare ESP32 devkit: a battery simulator stands in for the missing INA226, and
-every simulated measurement carries the `SIM` flag all the way into the log and
-onto the air.
+(Arduino-ESP32 3.3.11 / ESP-IDF 5.5) and no external library. It is published as
+**version 1.0.0** under the GPL-3.0 licence, in the
+[`firmware/`](https://github.com/tadorne-org/vigie/tree/main/firmware) folder of
+the repository ([announcement](/log/firmware-1-0/)). It also runs on a bare ESP32
+devkit: a battery simulator stands in for the missing INA226, and every
+simulated measurement carries the `SIM` flag all the way into the log and onto
+the air.
 
 The cycle is deep sleep broken by short wake-ups:
 
@@ -179,8 +183,29 @@ offers the same functions.
 
 <figure class="doc">
   <img loading="lazy" decoding="async" src="/img/v1-dashboard.webp" alt="Vigie 1.0 dashboard, served from the board's own access point.">
-  <figcaption>The admin page, served from the board's own access point. With no shunt, the current columns still show the INA226's full scale.</figcaption>
+  <figcaption>The admin page, served from the board's own access point (captured with version 0.1.0). With no shunt, the current columns still show the INA226's full scale.</figcaption>
 </figure>
+
+## The enclosure and the TPU sole
+
+The node sits in an off-the-shelf sealed enclosure: the enclosure provides the
+sealing, and a **TPU 95A sole** takes care of the mechanical fit. It lines the
+bottom of the enclosure, carries the shunt in a cradle whose lips close over the
+blocks, and houses the board on four posts. A **pad**, glued under the lid,
+presses on the cradle with 1.5 mm of crush: the shunt is clamped between the
+floor and the lid, with no play.
+
+{{< viewer src="/models/semelle_shunt_TPU.glb" label="Sole — shunt cradle and board posts" >}}
+
+{{< viewer src="/models/tampon_shunt_TPU.glb" label="Pad — exported upside down, web against the bed" >}}
+
+The sole prints at 25 % gyroid, the pad at 100 %; the cradle comes out solid
+thanks to an infill modifier. The OpenSCAD source, the STL files and the Cura
+profiles are in the
+[`mecanique/`](https://github.com/tadorne-org/vigie/tree/main/mecanique) folder,
+and the details are in the post
+[Printing a TPU sole](/log/printing-tpu-sole/). Several enclosure dimensions are
+still to be taken from the real part.
 
 ## Network and application
 
@@ -224,8 +249,9 @@ and the gateway will join the network without modifying the board.
 | Current sign at the shunt | to be confirmed at first wiring |
 | Antenna in a closed locker, in the bilge | open point; the ESP32-WROOM-32UE variant, with a u.FL remote antenna, fits the same footprint |
 | RS485 for the EPEver MPPT | not fitted; external MAX3485 module on J7 |
-| Firmware | still to be published |
-| Bill of materials and calibration procedure | to come with the firmware |
+| Firmware | published as 1.0.0 (GPL-3.0) |
+| Enclosure | TPU sole and pad published; enclosure dimensions to be measured |
+| Bill of materials and calibration procedure | to come |
 
 The bench validated the build of all three environments, the sleep cycle, the
 log and its recovery after reset, the 100 % resynchronisation and the low-voltage
