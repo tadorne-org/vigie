@@ -202,9 +202,15 @@ main { flex: 1 0 auto; padding-block: clamp(2.5rem, 6vw, 4.5rem); }
     [text-end] minmax(0, 1fr) [full-end];
 }
 .prose > * { grid-column: text; min-width: 0; }
-.prose > :is(pre, figure, .table-wrap, .specs, .grid, .cards, .photo-grid) {
+.prose > :is(pre, figure, scad-viewer, .table-wrap, .specs, .grid, .cards, .photo-grid) {
   grid-column: full;
   max-width: min(100%, 56rem);
+}
+
+/* Visualiseur 3D (socle) : la teinte est appliquée par static/js/vigie-viewer-tint.js. */
+scad-viewer {
+  display: block;
+  margin: 1.75rem 0;
 }
 
 /* Album photo du journal : colonnes CSS pures, sans JavaScript. */
