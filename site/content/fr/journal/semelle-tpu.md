@@ -8,8 +8,7 @@ params:
 ---
 
 La semelle du coffret est imprimée. Une seule pièce en **TPU 95A**, souple,
-imprimée à plat sur une Ender 3 : une dalle de 6 mm qui tapisse tout le fond du
-coffret.
+imprimée à plat sur une Ender 3 : une dalle de 6 mm qui tapisse le fond.
 
 <figure>
   <img src="/img/v1-sole-print.webp" alt="Semelle en TPU orange en cours d'impression sur le plateau d'une imprimante Ender.">
@@ -17,11 +16,9 @@ coffret.
 
 ## Ce que la semelle fait
 
-Elle porte les deux pièces qui ne doivent pas bouger : elle **berce le shunt**
-dans un berceau dont les lèvres se referment sur les blocs, et elle **porte la
-carte** sur quatre colonnettes à vis M3. La poche est un peu plus courte que le
-shunt, qui reste pincé en longueur ; le dessous est plat, pour un fond de
-coffret garni de picots moulés.
+Elle berce le shunt dans un berceau dont les lèvres se referment sur les blocs,
+et porte la carte sur quatre colonnettes à vis M3. La poche est un peu plus
+courte que le shunt, qui reste pincé en longueur.
 
 <figure>
   <img src="/img/v1-sole.webp" alt="Semelle en TPU 95A terminée, tenue à la main : dessous plat, berceau du shunt sur le bord.">
@@ -29,25 +26,8 @@ coffret garni de picots moulés.
 
 Un tampon plein, collé sous le couvercle, appuie sur le berceau avec 1,5 mm de
 précontrainte : le shunt est serré entre le fond et le couvercle, sans jeu. La
-dalle s'imprime en gyroïde 25 %, le berceau plein ; deux vis M4 et des bagues
-de compression plaquent le tout au fond.
-
-## Sur l'établi
-
-Le nœud est monté dans son coffret : le shunt à gauche, la carte au centre,
-au-dessus de sa semelle.
+dalle s'imprime en gyroïde 25 %, le berceau plein.
 
 <figure>
   <img src="/img/v1-enclosure.webp" alt="Le nœud monté dans son coffret : shunt à gauche, carte Vigie 1.0 au centre au-dessus de sa semelle en TPU.">
 </figure>
-
-## La suite : le câblage et les mesures
-
-Reste le câblage à finir, puis les mesures sur batterie — le **courant de repos
-réel** et le **sens du courant au shunt**. Le banc ferme alors le jalon M1.
-
-## Où
-
-- [Documentation technique](/fr/documentation/) — la carte, la mesure, le
-  micrologiciel.
-- [Feuille de route](/fr/feuille-de-route/) — jalons M1 et M4.
