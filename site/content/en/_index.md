@@ -19,6 +19,10 @@ params:
     webm: "/video/vigie-en.webm"
     poster: "/video/vigie-en-poster.jpg"
     caption: "Vigie 1.0: the exploded stack, then the board aboard — shunt, Kelvin pair, Bluetooth LE."
+  photo:
+    src: "/img/v1-node-top.webp"
+    alt: "The Vigie 1.0 node assembled in its sealed enclosure, seen from above: the board on an orange TPU sole, the shunt above it, the cable glands and the sense wires."
+    caption: "The assembled node: the Vigie 1.0 board on its TPU sole, the shunt above it, in its sealed enclosure."
   figures:
     - label: "Board"
       value: "86 × 54 mm"

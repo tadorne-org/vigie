@@ -716,6 +716,13 @@ table.prose-plain td { font-family: inherit; font-size: inherit; }
   background: var(--td-ink);
   border-radius: var(--td-radius);
 }
+.promo__photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--td-radius);
+  border: 1px solid var(--td-border);
+}
 .promo__caption {
   margin-top: 0.6rem;
   font-size: 0.85rem;
