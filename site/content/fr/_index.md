@@ -19,6 +19,10 @@ params:
     webm: "/video/vigie-fr.webm"
     poster: "/video/vigie-fr-poster.jpg"
     caption: "Vigie 1.0 : la vue éclatée, puis la carte à bord — shunt, paire Kelvin, Bluetooth LE."
+  photo:
+    src: "/img/v1-node-top.webp"
+    alt: "Le nœud Vigie 1.0 monté dans son coffret étanche, vu de dessus : la carte posée sur une semelle en TPU orange, le shunt au-dessus, les presse-étoupes et les fils de mesure."
+    caption: "Le nœud monté : la carte Vigie 1.0 sur sa semelle en TPU, le shunt au-dessus, dans son coffret étanche."
   figures:
     - label: "Carte"
       value: "86 × 54 mm"

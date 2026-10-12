@@ -28,6 +28,13 @@
   </figure>
   {{ end }}
 
+  {{ with .Params.photo }}
+  <figure class="promo promo--photo">
+    <img class="promo__photo" src="{{ .src | relURL }}" alt="{{ .alt }}" width="2000" height="1016" loading="lazy" decoding="async">
+    <figcaption class="promo__caption">{{ .caption }}</figcaption>
+  </figure>
+  {{ end }}
+
   {{ with .Params.figures }}
   <dl class="figures">
     {{- range . }}
