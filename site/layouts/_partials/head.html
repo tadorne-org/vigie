@@ -25,6 +25,12 @@
   <link rel="preload" as="font" type="font/woff2" href="/fonts/space-grotesk-v22-latin_latin-ext-700.woff2" crossorigin>
   <link rel="stylesheet" href="{{ $css.RelPermalink }}"{{ with $css.Data.Integrity }} integrity="{{ . }}"{{ end }}>
 
+  {{/* socle's <scad-viewer>, loaded only on pages that actually embed a part. */}}
+  {{- if .Params.viewer }}
+  <script type="module" src="/js/scad-viewer.js"></script>
+  <script type="module" src="/js/vigie-viewer-tint.js"></script>
+  {{- end }}
+
   {{/* hreflang alternates: this page plus every translation */}}
   <link rel="alternate" hreflang="{{ .Site.Language.Lang }}" href="{{ .Permalink }}">
   {{- range .Translations }}
