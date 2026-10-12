@@ -193,8 +193,8 @@ fonctions.
 
 ## Le coffret et la semelle TPU
 
-Le nœud se loge dans un coffret étanche du commerce : l'étanchéité vient du
-coffret, et une **semelle en TPU 95A** fait le calage mécanique. Elle tapisse le
+Le nœud se loge dans un [coffret étanche IP67 du commerce](https://www.amazon.com.be/dp/B0GGGHLTX5) : l'étanchéité
+vient du coffret, et une **semelle en TPU 95A** fait le calage mécanique. Elle tapisse le
 fond du coffret, porte le shunt dans un berceau dont les lèvres se referment sur
 les blocs, et loge la carte sur quatre colonnettes. Un **tampon**, collé sous le
 couvercle, appuie sur le berceau avec 1,5 mm d'écrasement : le shunt est serré
@@ -210,7 +210,7 @@ profils Cura sont dans le dossier
 [`mecanique/`](https://github.com/tadorne-org/vigie/tree/main/mecanique), et le
 détail est dans le billet
 [Impression d'une semelle TPU](/fr/journal/impression-semelle-tpu/). Plusieurs
-cotes du coffret restent à relever sur la pièce réelle.
+cotes de ce coffret restent à relever sur la pièce réelle.
 
 ## Le réseau et l'application
 

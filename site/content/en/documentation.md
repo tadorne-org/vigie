@@ -188,8 +188,8 @@ offers the same functions.
 
 ## The enclosure and the TPU sole
 
-The node sits in an off-the-shelf sealed enclosure: the enclosure provides the
-sealing, and a **TPU 95A sole** takes care of the mechanical fit. It lines the
+The node sits in an off-the-shelf [IP67 sealed enclosure](https://www.amazon.com.be/dp/B0GGGHLTX5): the enclosure
+provides the sealing, and a **TPU 95A sole** takes care of the mechanical fit. It lines the
 bottom of the enclosure, carries the shunt in a cradle whose lips close over the
 blocks, and houses the board on four posts. A **pad**, glued under the lid,
 presses on the cradle with 1.5 mm of crush: the shunt is clamped between the
@@ -204,7 +204,7 @@ thanks to an infill modifier. The OpenSCAD source, the STL files and the Cura
 profiles are in the
 [`mecanique/`](https://github.com/tadorne-org/vigie/tree/main/mecanique) folder,
 and the details are in the post
-[Printing a TPU sole](/log/printing-tpu-sole/). Several enclosure dimensions are
+[Printing a TPU sole](/log/printing-tpu-sole/). Several dimensions of this enclosure are
 still to be taken from the real part.
 
 ## Network and application
